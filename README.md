@@ -1,0 +1,3 @@
+# cask
+
+Cache, abstracted simply.
