@@ -10,7 +10,9 @@ import (
 func (n *Namespace) Namespace(key ...string) *Namespace {
 	if n.raw != nil {
 		nsCpy := pointer.Copy(n)
-		nsCpy.key = append(n.key, key...)
+		// Copy key slice to avoid sharing backing array with the parent
+		baseKey := append([]string(nil), n.key...)
+		nsCpy.key = append(baseKey, key...)
 
 		// Refresh adapter
 		adapter, _ := state.Drivers[nsCpy.adapter].NewAdapter(nsCpy.raw, nsCpy)
