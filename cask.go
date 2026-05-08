@@ -12,9 +12,10 @@ func New(client any, key ...string) (n *Namespace, err error) {
 	}
 
 	// Try to find a suit client
-	for _, v := range state.Drivers {
+	for k, v := range state.Drivers {
 		if adapter, ok := v.NewClient(client, ns); ok {
 			ns.Adapter = adapter
+			ns.adapter = k
 		}
 	}
 	if ns.Adapter == nil {
