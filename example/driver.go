@@ -1,10 +1,12 @@
 package example
 
-import "go.gh.ink/cask/model"
+import (
+	"go.gh.ink/cask/model"
+)
 
 type Driver struct{}
 
-func (d Driver) NewClient(client any) (adapter model.Adapter, ok bool) {
+func (d Driver) NewClient(client any, ns model.NamespaceInfo) (adapter model.Adapter, ok bool) {
 	if _, ok = client.(bool); ok {
 		return Adapter{}, true
 	}
