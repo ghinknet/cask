@@ -1,0 +1,6 @@
+go.gh.ink/regexp v1.0.1 h1:ky3wxwskm49c4IlAeN64p4PeTXaO4o7Y8LpQRSeZLF8=
+go.gh.ink/regexp v1.0.1/go.mod h1:UKvDp3i0wU860Et6Ei+bVIfxrp9vJGGPswOlFhKvwaw=
+go.gh.ink/timex v1.1.0 h1:pfQ+dAajI1CI1JLmSsBW02uV/ITMQ2WCLvJFVrKoqRU=
+go.gh.ink/timex v1.1.0/go.mod h1:L6TB2VV1/ZxgIghwbBSZ8OJ6Uzkjr9UHuW5yftYAtso=
+go.gh.ink/toolbox v1.14.1 h1:qTEX5LA++ZhLEsr9CVgxql6v1kDfuQyOhM9eX1VKeQ4=
+go.gh.ink/toolbox v1.14.1/go.mod h1:WlVlSZL+yKIOV9bINXQVnBxVLegXOP9vcL+1+6oBQM8=
