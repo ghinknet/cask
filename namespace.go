@@ -11,8 +11,9 @@ func (n *Namespace) Namespace(key ...string) *Namespace {
 	if n.raw != nil {
 		nsCpy := pointer.Copy(n)
 		nsCpy.key = append(n.key, key...)
+
 		// Refresh adapter
-		adapter, _ := state.Drivers[nsCpy.adapter].NewClient(nsCpy.raw, nsCpy)
+		adapter, _ := state.Drivers[nsCpy.adapter].NewAdapter(nsCpy.raw, nsCpy)
 		nsCpy.Adapter = adapter
 
 		return nsCpy

@@ -13,7 +13,7 @@ func New(client any, key ...string) (n *Namespace, err error) {
 
 	// Try to find a suit client
 	for k, v := range state.Drivers {
-		if adapter, ok := v.NewClient(client, ns); ok {
+		if adapter, ok := v.NewAdapter(client, ns); ok {
 			ns.Adapter = adapter
 			ns.adapter = k
 		}
